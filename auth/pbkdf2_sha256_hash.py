@@ -9,5 +9,6 @@ try:
   plaintext = sys.argv[1]
 except IndexError:
   plaintext = pwd.genword()
+plaintext = "Zzxx7788"
 
 print(plaintext, pbkdf2_sha256.hash(plaintext, rounds=200000, salt_size=16))
